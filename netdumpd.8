@@ -1,5 +1,5 @@
 .\" Copyright (c) 2011 Sandvine Incorporated. All rights reserved.
-.\" Copyright (c) 2016 Dell EMC
+.\" Copyright (c) 2016-2017 Dell EMC
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -24,7 +24,7 @@
 .\"
 .\" $FreeBSD$
 .\"
-.Dd August 26, 2016
+.Dd April 7, 2017
 .Dt NETDUMPD 8
 .Os
 .Sh NAME
@@ -33,7 +33,6 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl a Ar addr
-.Op Fl b Ar prescript
 .Op Fl D
 .Op Fl d Ar dumpdir
 .Op Fl i Ar postscript
@@ -50,13 +49,6 @@ The following options are available:
 .It Fl a
 Bind the daemon to the given address
 .Dq Pa addr .
-.It Fl b
-Execute the script
-.Dq Pa script
-as soon as a dump begins.
-The script accepts the following strings as parameters: its name, reasons for
-invocation, the client address, the client hostname, the info file name and the
-core dump file name.
 .It Fl D
 Run the utility in debugging mode.
 The daemon version is not entered while the output is printed entirely on the
